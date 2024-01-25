@@ -1,0 +1,54 @@
+Algorithme dot_product(v1, v2):
+    // Assurez-vous que les vecteurs ont la même longueur
+    Si Longueur(v1) ≠ Longueur(v2):
+        Afficher "Les vecteurs n'ont pas la même longueur."
+        Retourner
+
+    // Initialiser le produit scalaire à zéro
+    ps <- 0
+    
+    // Calculer le produit scalaire
+    Pour i de 1 à Longueur(v1):
+        ps <- ps + (v1[i] * v2[i])
+    
+    // Afficher le résultat
+    Afficher "Le produit scalaire est:", ps
+
+Fin de l'algorithme
+Détermination de l'orthogonalité :
+
+Utilisons maintenant la fonction dot_product pour déterminer si deux vecteurs sont orthogonaux. Supposons que nous ayons n paires de vecteurs (v1, v2).
+
+
+Algorithme determiner_orthogonalite(paires_de_vecteurs):
+    Pour chaque paire (v1, v2) dans paires_de_vecteurs:
+        // Calculer le produit scalaire
+        dot_product(v1, v2)
+        
+        // Vérifier si le produit scalaire est nul (vecteurs orthogonaux)
+        Si le résultat du produit scalaire est égal à 0:
+            Afficher "Les vecteurs sont orthogonaux."
+        Sinon:
+            Afficher "Les vecteurs ne sont pas orthogonaux."
+    
+Fin de l'algorithme
+Tri par insertion :
+
+L'algorithme de tri par insertion peut être implémenté comme suit :
+
+plaintext
+Copy code
+Algorithme tri_par_insertion(tableau):
+    Pour i de 1 à Longueur(tableau):
+        élément_courant <- tableau[i]
+        j <- i - 1
+        
+        // Déplacer les éléments du tableau trié qui sont plus grands que l'élément courant
+        Tant que j ≥ 0 et tableau[j] > élément_courant:
+            tableau[j + 1] <- tableau[j]
+            j <- j - 1
+        
+        // Insérer l'élément courant à la bonne position
+        tableau[j + 1] <- élément_courant
+    
+Fin de l'algorithme
